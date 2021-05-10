@@ -1,7 +1,7 @@
 import dva from 'dva';
 import './utils/flexible';
 
-console.log('test9')
+console.log('test10')
 // 1. Initialize
 const app = dva();
 
