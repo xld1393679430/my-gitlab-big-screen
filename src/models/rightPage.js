@@ -1,4 +1,5 @@
-import { getRightPageData } from '../services/index';
+// import { getRightPageData } from '../services/index';
+import rightPageData from '../db/rightPageData'
 export default {
   // 命名空间 (必填)
   namespace: 'rightPage',
@@ -21,7 +22,9 @@ export default {
   // 异步请求
   effects: {
     *getRightPageData({ payload }, { call, put }) {
-      const data = yield call(getRightPageData);
+      // const data = yield call(getRightPageData);
+      const data = rightPageData
+      console.log(rightPageData, 'rightPageData')
       if (data) {
         yield put({
           type: 'setData',

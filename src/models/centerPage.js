@@ -1,4 +1,5 @@
-import { getCenterPageData } from '../services/index';
+// import { getCenterPageData } from '../services/index';
+import centerPageData from '../db/centerPageData'
 export default {
   // 命名空间 (必填)
   namespace: 'centerPage',
@@ -21,7 +22,8 @@ export default {
   // 异步请求
   effects: {
     *getCenterPageData({ payload }, { call, put }) {
-      const data = yield call(getCenterPageData);
+      // const data = yield call(getCenterPageData);
+      const data = centerPageData
       if (data) {
         yield put({
           type: 'setData',

@@ -1,4 +1,6 @@
-import { getLeftPageData } from '../services/index';
+// import { getLeftPageData } from '../services/index';
+import leftPageData from '../db/leftPageData'
+
 export default {
   // 命名空间 (必填)
   namespace: 'leftPage',
@@ -21,7 +23,8 @@ export default {
   // 异步请求
   effects: {
     *getLeftPageData({ payload }, { call, put }) {
-      const data = yield call(getLeftPageData);
+      // const data = yield call(getLeftPageData);
+      const data = leftPageData
       if (data) {
         yield put({
           type: 'setData',
